@@ -18,7 +18,10 @@
      --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;  
      --inner-shadow: inset  3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
  }
- body{
+ html {
+    scroll-behavior: smooth;
+  }
+   body{
      font-size: 16px;
      line-height: 1.5;
      overflow-x: hidden;
@@ -638,4 +641,76 @@ about section
     color: var(--text-black-600);
     line-height: 26px;
     margin: 15px 0 0;
+}
+
+/* ------------
+portfolio section
+---------------- */
+.portfolio-section{
+    padding: 80px 0 80px;
+    min-height: 100vh;
+}
+.portfolio-section .section-title{
+    margin-bottom: 40px;
+}
+.portfolio-section .portfolio-filter{
+    padding: 0 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.portfolio-section .filter-item{
+    display: inline-block;
+    margin-bottom: 0 5px 10px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--text-black-600);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.portfolio-section .filter-item:hover:not(.active){
+    opacity: 0.6;
+}
+.portfolio-section .filter-item.active{
+    color: var(--skin-color);
+}
+.portfolio-section .portfolio-item{
+    flex: 0 0 33.33%;
+    max-width: 33.33%; 
+    padding: 15px;  
+    display: flex;
+    flex-wrap: wrap;
+    position:relative;
+}
+.portfolio-section .portfolio-item.hide{
+    display: none;
+}
+.portfolio-section .portfolio-item.hide{
+    display: block;
+    animation: fadeInTop 0.5s ease;
+}
+.portfolio-section .portfolio-item-inner{
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+.portfolio-section .portfolio-item-inner:hover{
+    transform: translateY(-10px);
+    background-color: #f2f2f2;
+    transition: all 0.3s ease;
+}
+.portfolio-section .portfolio-item-img img{
+    border-radius: 5px;
+    width: 100%;
+}
+.portfolio-section .portfolio-item-inner p{
+    font-size: 16px;
+    margin: 10px 0 0;
+    color: var(--text-black-600);
+    text-transform: capitalize;
 }
